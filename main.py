@@ -11,6 +11,8 @@ import os
 import streamlit as st
 import datetime
 
+st.title("courceprogrammeA_Facial_Expression_Recognition")
+
 import torchvision
 from PIL import Image
 import time
@@ -374,7 +376,8 @@ if mode=="Use":
             st.stop()
 
         # 加载模型参数
-        model.load_state_dict(torch.load(model_path))
+        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        model.load_state_dict(torch.load(model_path, map_location=torch.device(device)))
 
         st.success(f"模型 {selected_model} 已加载成功！")
 
