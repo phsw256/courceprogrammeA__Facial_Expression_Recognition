@@ -14,7 +14,7 @@ import datetime
 st.title("courceprogrammeA_Facial_Expression_Recognition")
 st.write('#### kl\'s coruce programme.')
 st.wrtie('If u use your phone or browser not big enough, click the > above to choose what u want to do with this programme.')
-st.write('Unless locally installed, you can't train the models.')
+st.write('Unless locally installed, you can\'t train the models.')
 
 import torchvision
 from PIL import Image
