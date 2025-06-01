@@ -369,7 +369,7 @@ if mode=="Use":
             model = MediumCNN(use_bn=True)
         elif selected_model_name == 'vggstylenet':
             model = VGGStyleNet()
-        elif selected_model_name == 'resnet':
+        elif selected_model_name == 'simpleresnet':
             model = SimpleResNet(num_blocks=[2, 2, 2])
         else:
             st.error("模型类型不匹配，请检查模型文件名。")
